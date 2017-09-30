@@ -4,18 +4,23 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "dev-server": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^7.1.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-yamoney-nodejs-school": "file:babel-plugin-yamoney-nodejs-school",
+    "babel-preset-env": "^1.6.0",
     "css-loader": "^0.28.7",
+    "cssnano": "^3.10.0",
     "eslint": "^4.7.2",
     "eslint-loader": "^1.9.0",
+    "extract-text-webpack-plugin": "^3.0.0",
     "figlet": "^1.2.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
@@ -29,6 +34,7 @@
     "style-loader": "^0.18.2",
     "stylelint": "^8.1.1",
     "stylelint-config-recommended": "^1.0.0",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
   }
 }

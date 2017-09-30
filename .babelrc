@@ -1,3 +1,4 @@
 {
-  "plugins": "yamoney-nodejs-school"
+  "plugins": "yamoney-nodejs-school",
+  "presets": ["env"]
 }
