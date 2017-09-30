@@ -11,7 +11,6 @@ if (module.hot) {
   module.hot.accept('./print.js', function () {
     // eslint-disable-next-line no-console
     console.log('Accepting the updated printMe module!');
-    // eslint-disable-next-line no-undef
     printMe();
   })
 }

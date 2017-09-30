@@ -67,23 +67,79 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+module.exports = __webpack_require__(1);
 
-
-__webpack_require__(1);
-
-// eslint-disable-next-line no-console
-console.log('Hello, ' + 'Yamoney Node.js School' + '!');
-
-setTimeout(function () {
-  alert('Test');
-}, 5000);
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(2);
+
+var _print = __webpack_require__(3);
+
+var _print2 = _interopRequireDefault(_print);
+
+var _alert = __webpack_require__(4);
+
+var _alert2 = _interopRequireDefault(_alert);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// eslint-disable-next-line no-console
+console.log('Hello, ' + 'Yamoney Node.js School' + '!');
+(0, _alert2.default)();
+
+//HMR
+if (false) {
+  module.hot.accept('./print.js', function () {
+    // eslint-disable-next-line no-console
+    console.log('Accepting the updated printMe module!');
+    (0, _print2.default)();
+  });
+}
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = printMe;
+function printMe() {
+  // eslint-disable-next-line no-console
+  console.info('Updating print.js...');
+}
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = alertInFive;
+function alertInFive() {
+  setTimeout(function () {
+    alert('Test');
+  }, 5000);
+}
 
 /***/ })
 /******/ ]);
