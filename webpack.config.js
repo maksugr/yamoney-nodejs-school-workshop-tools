@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 const NODE_ENV = process.env.NODE_ENV || 'dev';
@@ -12,6 +13,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js'
   },
+  devtool: NODE_ENV == 'dev' ? 'cheap-inline-module-source-map' : null,
   module: {
     rules: [
       {
@@ -48,6 +50,10 @@ module.exports = {
         title: 'Yamoney Node.js School'
       }),
       new ExtractTextPlugin('styles.css'),
+      new UglifyJSPlugin({
+        mangle: false,
+        minimize: true
+      }),
     ]
     ,
   devServer: {
