@@ -13,7 +13,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js'
   },
-  devtool: NODE_ENV == 'dev' ? 'cheap-inline-module-source-map' : null,
+  devtool: NODE_ENV == 'dev' ? 'cheap-inline-module-source-map' : false,
   module: {
     rules: [
       {
