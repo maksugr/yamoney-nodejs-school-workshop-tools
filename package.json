@@ -4,7 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint \"src\" && stylelint \"src\\*.css\"",
+    "webpack": "webpack",
+    "gulp": "gulp build"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +21,9 @@
     "figlet": "^1.2.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
+    "gulp-csso": "^3.0.0",
     "gulp-eslint": "^4.0.0",
+    "gulp-minify": "^1.0.0",
     "gulp-postcss": "^7.0.0",
     "gulp-stylelint": "^5.0.0",
     "html-webpack-plugin": "^2.30.1",
