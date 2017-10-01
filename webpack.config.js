@@ -1,4 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const UglyES = require('uglify-es-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -18,15 +20,23 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'postcss-loader'
-        ]
-      }
-    ]
+        use: ExtractTextWebpackPlugin.extract({
+          fallback: 'style-loader',
+          use: [{loader: 'css-loader', options: { minimize: true }}, 'postcss-loader']
+        })
+      },{
+        test: /\.scss$/,
+        use: ExtractTextWebpackPlugin.extract({
+          fallback: 'style-loader',
+          use: [{loader: 'css-loader', options: { minimize: true }}, 'postcss-loader', 'sass-loader']
+        })
+      }]
   },
-  plugins: [new HtmlWebpackPlugin({
-    title: 'Yamoney Node.js School'
-  })]
+  plugins: [
+    new UglyES(),
+    new HtmlWebpackPlugin({
+      title: 'Yamoney Node.js School'
+    }),
+    new ExtractTextWebpackPlugin('styles.css')
+  ]
 };
