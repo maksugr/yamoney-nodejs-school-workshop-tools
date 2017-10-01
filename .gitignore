@@ -1,1 +1,13 @@
-node_modules
+dist/
+node_modules/
+.DS_Store
+Thumbs.db
+.idea
+*.sublime*
+*.log
+*.psd
+*.ai
+*.pdf
+*.old
+yarn.lock
+npm-debug.log*
