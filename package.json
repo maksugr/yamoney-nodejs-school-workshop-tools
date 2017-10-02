@@ -17,6 +17,8 @@
     "babel-loader": "^7.1.2",
     "babel-plugin-yamoney-nodejs-school": "file:babel-plugin-yamoney-nodejs-school",
     "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
     "css-loader": "^0.28.7",
     "cssnano": "^3.10.0",
     "eslint": "^4.7.2",
@@ -37,6 +39,7 @@
     "stylelint-config-recommended": "^1.0.0",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.6.0",
+    "webpack-config": "^7.4.0",
     "webpack-dev-server": "^2.9.1"
   }
 }
